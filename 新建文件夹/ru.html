@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оборудование для улицы оптом - Китайская фабрика</title>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+  line-height: 1.6;
+}
+.lang-switch {
+  text-align: right;
+  margin-bottom: 30px;
+}
+.lang-switch a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 600;
+}
+.lang-switch a.active {
+  color: #3498db;
+}
+.header {
+  text-align: center;
+  margin: 40px 0;
+}
+.header h1 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin: 50px 0;
+}
+.product-card {
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.product-card h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+.product-card .price {
+  color: #e74c3c;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.inquiry-form {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 50px 0;
+}
+.inquiry-form h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+.submit-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background-color: #2980b9;
+}
+.contact {
+  text-align: center;
+  margin-top: 40px;
+}
+.contact h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+.contact p {
+  margin: 8px 0;
+  font-size: 1.05rem;
+}
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.6rem;
+  }
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="lang-switch">
+    <a href="index.html">English</a>
+    <a href="fr.html">Français</a>
+    <a href="de.html">Deutsch</a>
+    <a href="es.html">Español</a>
+    <a href="#" class="active">Русский</a>
+  </div>
+  <div class="header">
+    <h1>Фабрика мебели для дома и улицы</h1>
+    <p>Мебель высокого качества оптом | Услуги OEM/ODM | С 2010 года</p>
+  </div>
+  <div class="products">
+    <div class="product-card">
+      <img src="https://picsum.photos/400/200?sofa" alt="Уличный деревянный диван">
+      <h3>Уличный деревянный диван</h3>
+      <p>Материал: Массивное тиковое дерево</p>
+      <p class="price">Минимальный заказ: 50 шт | 89 $/шт</p>
+    </div>
+    <div class="product-card">
+      <img src="https://picsum.photos/400/200?table" alt="Кофейный столик для гостиной">
+      <h3>Кофейный столик для гостиной</h3>
+      <p>Материал: МДФ + дубовая шпонка</p>
+      <p class="price">Минимальный заказ: 100 шт | 45 $/шт</p>
+    </div>
+    <div class="product-card">
+      <img src="https://picsum.photos/400/200?chair" alt="Садовый ротанговый стул">
+      <h3>Садовый ротанговый стул</h3>
+      <p>Материал: PE ротанг + алюминиевый каркас</p>
+      <p class="price">Минимальный заказ: 80 шт | 38 $/шт</p>
+    </div>
+  </div>
+  <div class="inquiry-form">
+    <h2>Отправьте нам запрос</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="form-group">
+        <label for="name">Ваше имя</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Ваш адрес электронной почты</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="product">Интересующий продукт</label>
+        <input type="text" id="product" name="product" placeholder="например: Уличный деревянный диван">
+      </div>
+      <div class="form-group">
+        <label for="message">Ваше сообщение</label>
+        <textarea id="message" name="message" placeholder="Укажите ваши требования (количество, срок доставки и т.д.)" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Отправить запрос</button>
+    </form>
+  </div>
+  <div class="contact">
+    <h2>Свяжитесь с нами</h2>
+    <p>📧 Электронная почта: sales@yourbrand.com</p>
+    <p>📱 WhatsApp: +86 138XXXX8888</p>
+    <p>🏭 Адрес: Промышленный парк мебели, Гуандун, Китай</p>
+    <p>✅ Услуги: OEM/ODM, индивидуальный дизайн, международная доставка</p>
+  </div>
+</body>
+</html>
