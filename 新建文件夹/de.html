@@ -3,199 +3,190 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Großhandel Außenmöbel - Chinesische Fabrik</title>
+  <title>Homeyoutdoor - Globaler Möbelhersteller | OEM/ODM Service</title>
   <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-body {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  color: #333;
-  line-height: 1.6;
-}
-.lang-switch {
-  text-align: right;
-  margin-bottom: 30px;
-}
-.lang-switch a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #2c3e50;
-  font-weight: 600;
-}
-.lang-switch a.active {
-  color: #3498db;
-}
-.header {
-  text-align: center;
-  margin: 40px 0;
-}
-.header h1 {
-  color: #2c3e50;
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-.header p {
-  color: #7f8c8d;
-  font-size: 1.1rem;
-}
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  margin: 50px 0;
-}
-.product-card {
-  border: 1px solid #eee;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-.product-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 15px;
-}
-.product-card h3 {
-  color: #2c3e50;
-  margin-bottom: 10px;
-}
-.product-card .price {
-  color: #e74c3c;
-  font-weight: 600;
-  margin: 10px 0;
-}
-.inquiry-form {
-  background-color: #f8f9fa;
-  padding: 30px;
-  border-radius: 8px;
-  margin: 50px 0;
-}
-.inquiry-form h2 {
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
-.form-group {
-  margin-bottom: 15px;
-}
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 500;
-}
-.form-group input, .form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-.form-group textarea {
-  height: 150px;
-  resize: vertical;
-}
-.submit-btn {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-.submit-btn:hover {
-  background-color: #2980b9;
-}
-.contact {
-  text-align: center;
-  margin-top: 40px;
-}
-.contact h2 {
-  color: #2c3e50;
-  margin-bottom: 15px;
-}
-.contact p {
-  margin: 8px 0;
-  font-size: 1.05rem;
-}
-@media (max-width: 768px) {
-  .header h1 {
-    font-size: 1.6rem;
-  }
-  .products {
-    grid-template-columns: 1fr;
-  }
-}
+    /* 样式与英文站完全一致，仅文字翻译 */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { color: #333; background: #fff; max-width: 1200px; margin: 0 auto; padding: 0 20px; line-height: 1.8; position: relative; }
+    a { text-decoration: none; color: #0066cc; }
+    a:hover { color: #004999; }
+    .hot-tag { background: #ff4400; color: #fff; font-size: 12px; padding: 2px 6px; border-radius: 2px; margin-right: 8px; }
+    .btn { display: inline-block; background: #0066cc; color: #fff; padding: 8px 16px; border-radius: 4px; font-size: 14px; margin-left: 10px; }
+    .btn:hover { background: #004999; color: #fff; }
+    h2 { font-size: 24px; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
+    h3 { font-size: 20px; margin: 30px 0 15px; }
+    h4 { font-size: 18px; margin: 20px 0 10px; }
+    ul { list-style: none; margin: 10px 0; padding-left: 20px; }
+    li { margin: 8px 0; list-style: disc; }
+    .section { margin: 50px 0; }
+    .flex-box { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; margin: 20px 0; }
+    .card { flex: 1; min-width: 280px; }
+    .num-info { font-size: 36px; font-weight: bold; color: #0066cc; margin: 10px 0; }
+    .contact-info { margin: 20px 0; line-height: 2; }
+    .news-item { border-bottom: 1px solid #eee; padding: 15px 0; }
+    .news-date { color: #666; font-size: 14px; margin-right: 10px; }
+
+    .lang-switch { position: absolute; top: 20px; right: 20px; z-index: 100; }
+    .lang-btn { background: none; border: none; font-size: 24px; cursor: pointer; color: #333; }
+    .lang-dropdown { display: none; position: absolute; right: 0; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-radius: 6px; margin-top: 10px; min-width: 180px; }
+    .lang-dropdown a { display: block; padding: 12px 20px; text-decoration: none; color: #333; border-radius: 4px; }
+    .lang-dropdown a.active { background: #e8f4fd; color: #007bff; font-weight: 600; }
+    .lang-switch:hover .lang-dropdown { display: block; }
+
+    .top-nav { padding: 40px 0 20px; border-bottom: 1px solid #eee; margin-bottom: 30px; }
+    .nav-list { display: flex; flex-wrap: wrap; gap: 30px; align-items: center; }
+    .nav-item { font-size: 18px; font-weight: 500; }
+    .nav-item a { color: #333; }
+    .nav-item a:hover { color: #0066cc; }
+
+    .brand-intro { padding: 20px 0; margin-bottom: 30px; }
+    .brand-intro h1 { font-size: 28px; margin-bottom: 15px; }
+    .factory-stats { display: flex; flex-wrap: wrap; gap: 25px; margin: 20px 0; }
+    .stat-item { min-width: 120px; }
+    .stat-item span { display: block; font-size: 14px; color: #666; }
+
+    .product-cate { margin: 15px 0; }
+    .product-list { padding-left: 20px; }
+    .product-item { list-style: none; margin: 10px 0; }
+
+    .footer { padding: 30px 0; border-top: 1px solid #eee; margin-top: 50px; }
   </style>
 </head>
 <body>
   <div class="lang-switch">
-    <a href="index.html">English</a>
-    <a href="fr.html">Français</a>
-    <a href="#" class="active">Deutsch</a>
-    <a href="es.html">Español</a>
-    <a href="ru.html">Русский</a>
-  </div>
-  <div class="header">
-    <h1>Fabrik für Haus- und Gartenmöbel</h1>
-    <p>Großhandel hochwertiger Möbel | OEM/ODM-Service | Seit 2010</p>
-  </div>
-  <div class="products">
-    <div class="product-card">
-      <img src="https://picsum.photos/400/200?sofa" alt="Gartensofa aus Holz">
-      <h3>Gartensofa aus Holz</h3>
-      <p>Material: Massivteakholz</p>
-      <p class="price">Mindestbestellmenge: 50 STK | 89 $/STK</p>
-    </div>
-    <div class="product-card">
-      <img src="https://picsum.photos/400/200?table" alt="Couchtisch für Wohnzimmer">
-      <h3>Couchtisch für Wohnzimmer</h3>
-      <p>Material: MDF + Eichenfurnier</p>
-      <p class="price">Mindestbestellmenge: 100 STK | 45 $/STK</p>
-    </div>
-    <div class="product-card">
-      <img src="https://picsum.photos/400/200?chair" alt="Gartenrattenstuhl">
-      <h3>Gartenrattenstuhl</h3>
-      <p>Material: PE-Rattan + Aluminiumrahmen</p>
-      <p class="price">Mindestbestellmenge: 80 STK | 38 $/STK</p>
+    <button class="lang-btn">🌐</button>
+    <div class="lang-dropdown">
+      <a href="index.html">English</a>
+      <a href="fr.html">Français</a>
+      <a href="de.html" class="active">Deutsch</a>
+      <a href="es.html">Español</a>
+      <a href="ru.html">Русский</a>
     </div>
   </div>
-  <div class="inquiry-form">
-    <h2>Senden Sie uns eine Anfrage</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <div class="form-group">
-        <label for="name">Ihr Name</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Ihre E-Mail</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="product">Interessantes Produkt</label>
-        <input type="text" id="product" name="product" placeholder="z.B. Gartensofa aus Holz">
-      </div>
-      <div class="form-group">
-        <label for="message">Ihre Nachricht</label>
-        <textarea id="message" name="message" placeholder="Geben Sie Ihre Anforderungen an (Menge, Lieferzeit etc.)" required></textarea>
-      </div>
-      <button type="submit" class="submit-btn">Anfrage senden</button>
-    </form>
+
+  <div class="top-nav">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="#home">Startseite</a></li>
+      <li class="nav-item"><a href="#about">Über uns</a></li>
+      <li class="nav-item"><a href="#products">Produkte</a></li>
+      <li class="nav-item"><a href="#contact">Kontakt</a></li>
+    </ul>
   </div>
-  <div class="contact">
+
+  <div id="home" class="brand-intro">
+    <h1>Homeyoutdoor Intl Co., Ltd</h1>
+    <p>Homeyoutdoor, ein globaler Möbelhersteller, grüßt Sie. Mit jahrzehntelanger Erfahrung in der Möbelherstellung ist Homeyoutdoor dank seiner hervorragenden Qualität, garantierten Lieferzeiten und seiner zeitgemäßen, trendigen Konzeption zur ersten Wahl hunderttausender Möbel Einzelhandelsmarken weltweit geworden.</p>
+    <p>Homeyoutdoor Furniture ist seit 8 Jahren der Möbelindustrie verpflichtet. Wir bieten unseren aktuellen und zukünftigen Kunden unübertroffene Vertriebs- und Produktentwicklungsdienste. Wir stehen Ihnen bei allen Ihren Anforderungen zur Seite, um Ihre One-Stop-Beschaffungserfahrung zu verbessern!</p>
+
+    <div class="factory-stats">
+      <div class="stat-item"><span class="num-info">8+</span><span>Jahre Erfahrung</span></div>
+      <div class="stat-item"><span class="num-info">6+</span><span>Produktionslinien</span></div>
+      <div class="stat-item"><span class="num-info">8000+m²</span><span>Bedeckte Fläche</span></div>
+      <div class="stat-item"><span class="num-info">100+</span><span>Kunden weltweit</span></div>
+      <div class="stat-item"><span class="num-info">80+</span><span>Versorgte Länder</span></div>
+    </div>
+  </div>
+
+  <div id="about" class="section">
+    <h2>Über uns - Unsere Kernstärken</h2>
+    <div class="flex-box">
+      <div class="card">
+        <h3>01 Individualisierung</h3>
+        <h4>Individuelle Polstertechnik</h4>
+        <p>Bei chinesischen Möbelherstellern ist das traditionelle OEM am häufigsten. Wir haben es lange getan, aber nach Jahrzehnten können wir uns nicht mehr darauf beschränken. Jetzt befinden wir uns in der Phase der reifen ODM- und fortschrittlichen OBM-Modelle. Unser erfahrendes F&E-Team unterstützt bei der Entwicklung jeder maßgeschneiderten Konstruktion in Zusammenarbeit mit Ihnen.</p>
+        <ul>
+          <li>Maßgeschneiderter Esszimmerstuhl</li>
+          <li>Maßgeschneideter Esstisch</li>
+          <li>Maßgeschneidetes Bett</li>
+          <li>Maßgeschneiderte Sofa</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>02 Verarbeitung</h3>
+        <h4>Intelligente Werkstatt</h4>
+        <p>„Zeitlose Handwerkskunst“ ist unser Leitprinzip und steht für den höchsten Herstellungsstandard. Dieses Engagement zeigt sich in zentralen Anlagen wie unserer intelligenten Stuhlproduktionslinie, der fortschrittlichsten Pulverbeschichtungslinie Nordchinas sowie reifen, leistungsstarken Linien für MDF-Tische und gepolsterte Sofas und Betten.</p>
+        <ul>
+          <li>Stuhlproduktionslinie</li>
+          <li>Tischproduktionslinie</li>
+          <li>Sofa-Produktionslinie</li>
+          <li>Bettproduktionslinie</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>03 Stärke</h3>
+        <h4>Größte lokale Fabrik und Ausstellungshalle</h4>
+        <p>Mit der steigenden Bestellnachfrage und der kontinuierlichen Erhöhung der Produktionskapazität verstärken wir die Investitionen in die Fertigungsrichtung, erweitern die Fabrik und steigern die Investitionen in fortschrittliche Ausrüstungen.</p>
+        <ul>
+          <li>Fabrik (8000m²)</li>
+          <li>Ausstellungshalle (Vier Etagen)</li>
+          <li>Vision Studio (Unterstützt durch E-Commerce)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="products" class="section">
+    <h2>Produkte - Die am besten platzierten Produkte</h2>
+    <div class="flex-box">
+      <div class="card">
+        <h4>Esszimmerstühle</h4>
+        <ul class="product-list">
+          <li class="product-item">Esszimmerstuhl aus Leinenstoff</li>
+          <li class="product-item">Homeyoutdoor Großhandels-Esszimmerstuhl mit Stich CHILLI AQUARE</li>
+          <li class="product-item">Gewebter Esszimmerstuhl (maßgeschneidert)</li>
+          <li class="product-item">Esszimmerstühle mit goldenen Beinen und Stoffbezügen</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Tische</h4>
+        <ul class="product-list">
+          <li class="product-item">Schwarzer runder Esstisch (ADTM2112)</li>
+          <li class="product-item">ALESSIO Esstisch aus MDF (UDT23003)</li>
+          <li class="product-item">Esstisch mit Marmorplatte (UDT22023)</li>
+          <li class="product-item">Bestverkäufter Esstisch made in China (UDT8060)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Sofas</h4>
+        <ul class="product-list">
+          <li class="product-item">Homeyoutdoor Großhandels-Modulsofa [2300x1000x670]</li>
+          <li class="product-item">Homeyoutdoor Großhandels-Ecksofa [2390x910x630]</li>
+          <li class="product-item">Homeyoutdoor Großhandels-Zweisitzer Sofa (HMSF245001)</li>
+          <li class="product-item">Großhandels-Cordsofa beige (USFB23001)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Betten</h4>
+        <ul class="product-list">
+          <li class="product-item">Homeyoutdoor Großhandels-Bett mit quadratischer bestickter Kopfteil</li>
+          <li class="product-item">Homeyoutdoor Großhandels-Bettgestell mit Stauraum</li>
+          <li class="product-item">Cremefarbenes Polsterbettgestell Queen Size</li>
+          <li class="product-item">Homeyoutdoor Großhandels-Bett mit gewölbtem Stoffkopfteil</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact" class="section">
     <h2>Kontaktieren Sie uns</h2>
-    <p>📧 E-Mail: sales@yourbrand.com</p>
-    <p>📱 WhatsApp: +86 138XXXX8888</p>
-    <p>🏭 Adresse: Möbelindustriegebiet, Guangdong, China</p>
-    <p>✅ Service: OEM/ODM, individuelles Design, weltweiter Versand</p>
+    <p>Wenn Sie an unseren Produkten interessiert sind, kontaktieren Sie uns bitte direkt.</p>
+    <p><strong>Wir antworten Ihnen innerhalb von 24 Stunden.</strong></p>
+
+    <div class="contact-info" style="font-size:16px; margin-top:20px; line-height:2;">
+      <p>📧 E-Mail: <a href="mailto:inquiry@homeyoutdoor.com">inquiry@homeyoutdoor.com</a></p>
+      <p>📱 WhatsApp: <a href="https://wa.me/8615919706381" target="_blank">+86 159 1970 6381</a></p>
+      <p>📍 Adresse: Technologiezentrum am Europaplatz, Dennewartstraße 25, 52068 Aachen, Deutschland (Europäische Niederlassung)<br>
+      Raum 119, Gebäude 1, Bandanyuan, Nr. 2 Bulong Road, Dongfang Bandao Community, Buji Subdistrict, Longgang District, Shenzhen, Guangdong Provinz, VR China (Chinesische Niederlassung)</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>© 2026 Homeyoutdoor Intl Co., Ltd. Alle Rechte vorbehalten.</p>
+    <div class="contact-info" style="margin-top:10px;">
+      <p>E-Mail: <a href="mailto:inquiry@homeyoutdoor.com">inquiry@homeyoutdoor.com</a> | WhatsApp: <a href="https://wa.me/8615919706381" target="_blank">+86 159 1970 6381</a></p>
+      <p>Adresse: Technologiezentrum am Europaplatz, Dennewartstraße 25, 52068 Aachen, Deutschland (Europäische Niederlassung)<br>
+      Raum 119, Gebäude 1, Bandanyuan, Nr. 2 Bulong Road, Dongfang Bandao Community, Buji Subdistrict, Longgang District, Shenzhen, Guangdong Provinz, VR China (Chinesische Niederlassung)</p>
+    </div>
   </div>
 </body>
 </html>
