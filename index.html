@@ -125,52 +125,13 @@ body{color:#333;background:#f8f9fa;line-height:1.8}
     </div>
   </div>
 
-  <!-- PRODUCTS (只显示分类，不上产品) -->
-<div id="products" class="section">
-  <h2 style="font-size:26px;margin-bottom:25px">Products</h2>
-  <div class="product-categories" id="product-list">
-    <!-- 这里会自动显示后台上传的产品 -->
+  <!-- PRODUCTS -->
+  <div id="products" class="section">
+    <h2 style="font-size:26px;margin-bottom:25px">Products</h2>
+    <div class="product-categories" id="product-list">
+      <!-- 产品会在点击 Products 时自动加载 -->
+    </div>
   </div>
-</div>
-
-<script>
-// 自动加载后台产品
-async function loadProducts() {
-  const productList = document.getElementById('product-list');
-  productList.innerHTML = '';
-
-  // 读取 _products 文件夹里的所有产品
-  const response = await fetch('/_products/');
-  const text = await response.text();
-  const parser = new DOMParser();
-  const htmlDoc = parser.parseFromString(text, 'text/html');
-  const files = Array.from(htmlDoc.querySelectorAll('a')).map(a => a.href).filter(href => href.endsWith('.md'));
-
-  for (const file of files) {
-    const res = await fetch(file);
-    const md = await res.text();
-    // 解析 Markdown 格式
-    const title = md.match(/title:\s*(.+)/)[1];
-    const image = md.match(/image:\s*(.+)/)[1];
-    const description = md.match(/description:\s*(.+)/)[1];
-    const category = md.match(/category:\s*(.+)/)[1];
-
-    productList.innerHTML += `
-      <div class="category-item">
-        <img src="${image}" alt="${title}" style="width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:12px">
-        <h3>${title}</h3>
-        <p>${category}</p>
-        <p style="font-size:13px;color:#666;margin-top:8px">${description}</p>
-      </div>
-    `;
-  }
-}
-
-// 页面加载完成后自动加载产品
-document.addEventListener('DOMContentLoaded', () => {
-  loadProducts();
-});
-</script>
 
   <!-- CONTACT -->
   <div id="contact" class="section">
@@ -190,9 +151,48 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 
 <script>
+// 导航切换（修复语言切换冲突）
 function show(id) {
   document.querySelectorAll('.section').forEach(el => el.style.display = 'none');
   document.getElementById(id).style.display = 'block';
+  if (id === 'products') loadProducts();
+}
+
+// 加载后台产品
+async function loadProducts() {
+  const list = document.getElementById('product-list');
+  list.innerHTML = '<p style="text-align:center;color:#666">Loading products...</p>';
+  try {
+    const res = await fetch('/_products/');
+    if (!res.ok) throw new Error('No products');
+    const text = await res.text();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, 'text/html');
+    const files = Array.from(doc.querySelectorAll('a')).map(a => a.href).filter(h => h.endsWith('.md'));
+    if (files.length === 0) {
+      list.innerHTML = '<p style="text-align:center;color:#666">No products uploaded yet.</p>';
+      return;
+    }
+    let html = '';
+    for (const f of files) {
+      const md = await (await fetch(f)).text();
+      const title = md.match(/title:\s*(.+)/)?.[1] || 'Untitled';
+      const image = md.match(/image:\s*(.+)/)?.[1] || 'https://via.placeholder.com/260x160?text=No+Image';
+      const desc = md.match(/description:\s*(.+)/)?.[1] || 'No description';
+      const cat = md.match(/category:\s*(.+)/)?.[1] || 'Uncategorized';
+      html += `
+        <div class="category-item">
+          <img src="${image}" alt="${title}" style="width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:12px">
+          <h3>${title}</h3>
+          <p>${cat}</p>
+          <p style="font-size:13px;color:#666;margin-top:8px">${desc}</p>
+        </div>
+      `;
+    }
+    list.innerHTML = html;
+  } catch (e) {
+    list.innerHTML = '<p style="text-align:center;color:#666">No products uploaded yet.</p>';
+  }
 }
 </script>
 </body>
