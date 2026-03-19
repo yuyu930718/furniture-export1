@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wholesale Outdoor Furniture - China Factory</title>
+  <!-- 内置样式，不用单独建CSS文件 -->
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+  line-height: 1.6;
+}
+.lang-switch {
+  text-align: right;
+  margin-bottom: 30px;
+}
+.lang-switch a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 600;
+}
+.lang-switch a.active {
+  color: #3498db;
+}
+.header {
+  text-align: center;
+  margin: 40px 0;
+}
+.header h1 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin: 50px 0;
+}
+.product-card {
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.product-card h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+.product-card .price {
+  color: #e74c3c;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.inquiry-form {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 50px 0;
+}
+.inquiry-form h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+.submit-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background-color: #2980b9;
+}
+.contact {
+  text-align: center;
+  margin-top: 40px;
+}
+.contact h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+.contact p {
+  margin: 8px 0;
+  font-size: 1.05rem;
+}
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.6rem;
+  }
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="lang-switch">
+    <a href="#" class="active">English</a>
+    <a href="fr.html">Français</a>
+    <a href="de.html">Deutsch</a>
+    <a href="es.html">Español</a>
+    <a href="ru.html">Русский</a>
+  </div>
+  <div class="header">
+    <h1>Home & Outdoor Furniture Factory</h1>
+    <p>Wholesale High-Quality Furniture | OEM/ODM Supported | Since 2010</p>
+  </div>
+  <div class="products">
+    <div class="product-card">
+      <img src="https://picsum.photos/400/200?sofa" alt="Outdoor Wooden Sofa">
+      <h3>Outdoor Wooden Sofa</h3>
+      <p>Material: Solid Teak Wood</p>
+      <p class="price">MOQ: 50 PCS | $89/PCS</p>
+    </div>
+    <div class="product-card">
+      <img src="https://picsum.photos/400/200?table" alt="Living Room Coffee Table">
+      <h3>Living Room Coffee Table</h3>
+      <p>Material: MDF + Oak Veneer</p>
+      <p class="price">MOQ: 100 PCS | $45/PCS</p>
+    </div>
+    <div class="product-card">
+      <img src="https://picsum.photos/400/200?chair" alt="Garden Rattan Chair">
+      <h3>Garden Rattan Chair</h3>
+      <p>Material: PE Rattan + Aluminum Frame</p>
+      <p class="price">MOQ: 80 PCS | $38/PCS</p>
+    </div>
+  </div>
+  <div class="inquiry-form">
+    <h2>Send Us an Inquiry</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="product">Interested Product</label>
+        <input type="text" id="product" name="product" placeholder="e.g. Outdoor Wooden Sofa">
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" placeholder="Tell us your requirements (quantity, delivery time, etc.)" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Inquiry</button>
+    </form>
+  </div>
+  <div class="contact">
+    <h2>Contact Us</h2>
+    <p>📧 Email: sales@yourbrand.com</p>
+    <p>📱 WhatsApp: +86 138XXXX8888</p>
+    <p>🏭 Address: Furniture Industrial Park, Guangdong, China</p>
+    <p>✅ Service: OEM/ODM, Custom Design, Global Shipping</p>
+  </div>
+</body>
+</html>
