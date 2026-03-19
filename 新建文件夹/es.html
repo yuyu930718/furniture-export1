@@ -3,199 +3,190 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muebles exteriores al por mayor - Fábrica china</title>
+  <title>Homeyoutdoor - Fabricante global de muebles | Servicio OEM/ODM</title>
   <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-body {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  color: #333;
-  line-height: 1.6;
-}
-.lang-switch {
-  text-align: right;
-  margin-bottom: 30px;
-}
-.lang-switch a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #2c3e50;
-  font-weight: 600;
-}
-.lang-switch a.active {
-  color: #3498db;
-}
-.header {
-  text-align: center;
-  margin: 40px 0;
-}
-.header h1 {
-  color: #2c3e50;
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-.header p {
-  color: #7f8c8d;
-  font-size: 1.1rem;
-}
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  margin: 50px 0;
-}
-.product-card {
-  border: 1px solid #eee;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-.product-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 15px;
-}
-.product-card h3 {
-  color: #2c3e50;
-  margin-bottom: 10px;
-}
-.product-card .price {
-  color: #e74c3c;
-  font-weight: 600;
-  margin: 10px 0;
-}
-.inquiry-form {
-  background-color: #f8f9fa;
-  padding: 30px;
-  border-radius: 8px;
-  margin: 50px 0;
-}
-.inquiry-form h2 {
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
-.form-group {
-  margin-bottom: 15px;
-}
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 500;
-}
-.form-group input, .form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-.form-group textarea {
-  height: 150px;
-  resize: vertical;
-}
-.submit-btn {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-.submit-btn:hover {
-  background-color: #2980b9;
-}
-.contact {
-  text-align: center;
-  margin-top: 40px;
-}
-.contact h2 {
-  color: #2c3e50;
-  margin-bottom: 15px;
-}
-.contact p {
-  margin: 8px 0;
-  font-size: 1.05rem;
-}
-@media (max-width: 768px) {
-  .header h1 {
-    font-size: 1.6rem;
-  }
-  .products {
-    grid-template-columns: 1fr;
-  }
-}
+    /* 样式与英文站完全一致，仅文字翻译 */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { color: #333; background: #fff; max-width: 1200px; margin: 0 auto; padding: 0 20px; line-height: 1.8; position: relative; }
+    a { text-decoration: none; color: #0066cc; }
+    a:hover { color: #004999; }
+    .hot-tag { background: #ff4400; color: #fff; font-size: 12px; padding: 2px 6px; border-radius: 2px; margin-right: 8px; }
+    .btn { display: inline-block; background: #0066cc; color: #fff; padding: 8px 16px; border-radius: 4px; font-size: 14px; margin-left: 10px; }
+    .btn:hover { background: #004999; color: #fff; }
+    h2 { font-size: 24px; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
+    h3 { font-size: 20px; margin: 30px 0 15px; }
+    h4 { font-size: 18px; margin: 20px 0 10px; }
+    ul { list-style: none; margin: 10px 0; padding-left: 20px; }
+    li { margin: 8px 0; list-style: disc; }
+    .section { margin: 50px 0; }
+    .flex-box { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; margin: 20px 0; }
+    .card { flex: 1; min-width: 280px; }
+    .num-info { font-size: 36px; font-weight: bold; color: #0066cc; margin: 10px 0; }
+    .contact-info { margin: 20px 0; line-height: 2; }
+    .news-item { border-bottom: 1px solid #eee; padding: 15px 0; }
+    .news-date { color: #666; font-size: 14px; margin-right: 10px; }
+
+    .lang-switch { position: absolute; top: 20px; right: 20px; z-index: 100; }
+    .lang-btn { background: none; border: none; font-size: 24px; cursor: pointer; color: #333; }
+    .lang-dropdown { display: none; position: absolute; right: 0; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-radius: 6px; margin-top: 10px; min-width: 180px; }
+    .lang-dropdown a { display: block; padding: 12px 20px; text-decoration: none; color: #333; border-radius: 4px; }
+    .lang-dropdown a.active { background: #e8f4fd; color: #007bff; font-weight: 600; }
+    .lang-switch:hover .lang-dropdown { display: block; }
+
+    .top-nav { padding: 40px 0 20px; border-bottom: 1px solid #eee; margin-bottom: 30px; }
+    .nav-list { display: flex; flex-wrap: wrap; gap: 30px; align-items: center; }
+    .nav-item { font-size: 18px; font-weight: 500; }
+    .nav-item a { color: #333; }
+    .nav-item a:hover { color: #0066cc; }
+
+    .brand-intro { padding: 20px 0; margin-bottom: 30px; }
+    .brand-intro h1 { font-size: 28px; margin-bottom: 15px; }
+    .factory-stats { display: flex; flex-wrap: wrap; gap: 25px; margin: 20px 0; }
+    .stat-item { min-width: 120px; }
+    .stat-item span { display: block; font-size: 14px; color: #666; }
+
+    .product-cate { margin: 15px 0; }
+    .product-list { padding-left: 20px; }
+    .product-item { list-style: none; margin: 10px 0; }
+
+    .footer { padding: 30px 0; border-top: 1px solid #eee; margin-top: 50px; }
   </style>
 </head>
 <body>
   <div class="lang-switch">
-    <a href="index.html">English</a>
-    <a href="fr.html">Français</a>
-    <a href="de.html">Deutsch</a>
-    <a href="#" class="active">Español</a>
-    <a href="ru.html">Русский</a>
-  </div>
-  <div class="header">
-    <h1>Fábrica de muebles para el hogar y exteriores</h1>
-    <p>Muebles de alta calidad al por mayor | Servicio OEM/ODM | Desde 2010</p>
-  </div>
-  <div class="products">
-    <div class="product-card">
-      <img src="https://picsum.photos/400/200?sofa" alt="Sofá de madera exterior">
-      <h3>Sofá de madera exterior</h3>
-      <p>Material: Madera de teca maciza</p>
-      <p class="price">MOQ: 50 UN | 89 $/UN</p>
-    </div>
-    <div class="product-card">
-      <img src="https://picsum.photos/400/200?table" alt="Mesa de centro para sala">
-      <h3>Mesa de centro para sala</h3>
-      <p>Material: MDF + chapa de roble</p>
-      <p class="price">MOQ: 100 UN | 45 $/UN</p>
-    </div>
-    <div class="product-card">
-      <img src="https://picsum.photos/400/200?chair" alt="Silla de ratán de jardín">
-      <h3>Silla de ratán de jardín</h3>
-      <p>Material: Ratán PE + marco de aluminio</p>
-      <p class="price">MOQ: 80 UN | 38 $/UN</p>
+    <button class="lang-btn">🌐</button>
+    <div class="lang-dropdown">
+      <a href="index.html">English</a>
+      <a href="fr.html">Français</a>
+      <a href="de.html">Deutsch</a>
+      <a href="es.html" class="active">Español</a>
+      <a href="ru.html">Русский</a>
     </div>
   </div>
-  <div class="inquiry-form">
-    <h2>Envíanos una consulta</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <div class="form-group">
-        <label for="name">Tu nombre</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Tu correo electrónico</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="product">Producto de interés</label>
-        <input type="text" id="product" name="product" placeholder="ej: Sofá de madera exterior">
-      </div>
-      <div class="form-group">
-        <label for="message">Tu mensaje</label>
-        <textarea id="message" name="message" placeholder="Indica tus requerimientos (cantidad, tiempo de entrega, etc.)" required></textarea>
-      </div>
-      <button type="submit" class="submit-btn">Enviar consulta</button>
-    </form>
+
+  <div class="top-nav">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="#home">Inicio</a></li>
+      <li class="nav-item"><a href="#about">Sobre nosotros</a></li>
+      <li class="nav-item"><a href="#products">Productos</a></li>
+      <li class="nav-item"><a href="#contact">Contacto</a></li>
+    </ul>
   </div>
-  <div class="contact">
-    <h2>Contáctanos</h2>
-    <p>📧 Correo electrónico: sales@yourbrand.com</p>
-    <p>📱 WhatsApp: +86 138XXXX8888</p>
-    <p>🏭 Dirección: Parque industrial de muebles, Guangdong, China</p>
-    <p>✅ Servicio: OEM/ODM, Diseño personalizado, Envío mundial</p>
+
+  <div id="home" class="brand-intro">
+    <h1>Homeyoutdoor Intl Co., Ltd</h1>
+    <p>Homeyoutdoor, fabricante global de muebles, le envía un saludo. Con décadas de experiencia en la fabricación de muebles, Homeyoutdoor se ha convertido en la mejor opción para cientos de marcas minoristas de muebles en todo el mundo gracias a su excelente calidad, plazos de entrega garantizados y concepto de tendencia acorde a los tiempos.</p>
+    <p>Homeyoutdoor Furniture se ha dedicado a la industria de muebles durante 8 años. Brindamos servicios de ventas y desarrollo de productos incomparables a nuestros clientes actuales y potenciales. Estamos aquí para guiarlo en todas sus necesidades para mejorar su experiencia de aprovisionamiento en una sola parada.</p>
+
+    <div class="factory-stats">
+      <div class="stat-item"><span class="num-info">8+</span><span>Años de experiencia</span></div>
+      <div class="stat-item"><span class="num-info">6+</span><span>Líneas de producción</span></div>
+      <div class="stat-item"><span class="num-info">8000+m²</span><span>Área cubierta</span></div>
+      <div class="stat-item"><span class="num-info">100+</span><span>Clientes en todo el mundo</span></div>
+      <div class="stat-item"><span class="num-info">80+</span><span>Países suministrados</span></div>
+    </div>
+  </div>
+
+  <div id="about" class="section">
+    <h2>Sobre nosotros - Nuestras fortalezas principales</h2>
+    <div class="flex-box">
+      <div class="card">
+        <h3>01 Personalización</h3>
+        <h4>Técnica de tapicería personalizada</h4>
+        <p>En cuanto al fabricante de muebles chino, el OEM tradicional es el más común, lo hicimos, pero después de décadas, no podemos limitarnos a eso. Ahora nos encontramos en la fase del modelo ODM maduro y el modelo OBM avanzado. Nuestro equipo de I+D experimentado ayuda en el diseño de cada pieza personalizada, en colaboración.</p>
+        <ul>
+          <li>Silla de comedor personalizada</li>
+          <li>Mesa de comedor personalizada</li>
+          <li>Cama personalizada</li>
+          <li>Sofá personalizado</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>02 Procesamiento</h3>
+        <h4>Taller inteligente</h4>
+        <p>La "artesanía atemporal" es nuestro principio rector, que representa el más alto estándar de fabricación. Este compromiso se demuestra a través de instalaciones clave como nuestra línea de producción inteligente de sillas, la línea de recubrimiento en polvo más avanzada del norte de China, y líneas maduras y de alta capacidad para mesas de MDF y sofás y camas tapizados.</p>
+        <ul>
+          <li>Línea de producción de sillas</li>
+          <li>Línea de producción de mesas</li>
+          <li>Línea de producción de sofás</li>
+          <li>Línea de producción de camas</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>03 Fortaleza</h3>
+        <h4>La fábrica y sala de exposiciones más grande de la zona</h4>
+        <p>Con el aumento de la demanda de pedidos y el crecimiento continuo de la capacidad de producción, fortalecemos la inversión en la dirección de fabricación, expandimos la fábrica y aumentamos la inversión en equipos avanzados.</p>
+        <ul>
+          <li>Fábrica (8000m²)</li>
+          <li>Sala de exposiciones (Cuatro pisos)</li>
+          <li>Estudio de visión (Impulsado por comercio electrónico)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="products" class="section">
+    <h2>Productos - Los productos mejor posicionados</h2>
+    <div class="flex-box">
+      <div class="card">
+        <h4>Sillas de comedor</h4>
+        <ul class="product-list">
+          <li class="product-item">Silla de comedor de lino</li>
+          <li class="product-item">Homeyoutdoor Silla de comedor al por mayor con puntada CHILLI AQUARE</li>
+          <li class="product-item">Silla de comedor tejida personalizada</li>
+          <li class="product-item">Sillas de comedor con patas doradas y fundas de asiento de tela</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Mesas</h4>
+        <ul class="product-list">
+          <li class="product-item">Mesa de comedor redonda negra (ADTM2112)</li>
+          <li class="product-item">Mesa de comedor ALESSIO de MDF (UDT23003)</li>
+          <li class="product-item">Mesa de comedor con encimera de mármol (UDT22023)</li>
+          <li class="product-item">Mesa de comedor más vendida hecha en China (UDT8060)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Sofás</h4>
+        <ul class="product-list">
+          <li class="product-item">Homeyoutdoor Sofá modular al por mayor [2300x1000x670]</li>
+          <li class="product-item">Homeyoutdoor Sofá seccional al por mayor [2390x910x630]</li>
+          <li class="product-item">Homeyoutdoor Sofá de dos plazas al por mayor (HMSF245001)</li>
+          <li class="product-item">Sofá de terciopelo ribeteado beige al por mayor (USFB23001)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Camas</h4>
+        <ul class="product-list">
+          <li class="product-item">Homeyoutdoor Cama al por mayor con cabecero de puntada cuadrada</li>
+          <li class="product-item">Homeyoutdoor Marco de cama al por mayor con almacenamiento</li>
+          <li class="product-item">Marco de cama plataforma tapizado de tela crema tamaño Queen</li>
+          <li class="product-item">Homeyoutdoor Cama al por mayor con cabecero curvado de tela</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact" class="section">
+    <h2>Contáctenos</h2>
+    <p>Si está interesado en nuestros productos, contáctenos directamente.</p>
+    <p><strong>Le responderemos en las próximas 24 horas.</strong></p>
+
+    <div class="contact-info" style="font-size:16px; margin-top:20px; line-height:2;">
+      <p>📧 Correo electrónico: <a href="mailto:inquiry@homeyoutdoor.com">inquiry@homeyoutdoor.com</a></p>
+      <p>📱 WhatsApp: <a href="https://wa.me/8615919706381" target="_blank">+86 159 1970 6381</a></p>
+      <p>📍 Dirección: Technologiezentrum am Europaplatz, Dennewartstraße 25, 52068 Aachen, Alemania (sucursal europea)<br>
+      Habitación 119, Edificio 1, Bandanyuan, N°2 Bulong Road, Comunidad Dongfang Bandao, Subdistrito Buji, Distrito Longgang, Ciudad de Shenzhen, Provincia de Guangdong, China (sucursal china)</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>© 2026 Homeyoutdoor Intl Co., Ltd. Todos los derechos reservados.</p>
+    <div class="contact-info" style="margin-top:10px;">
+      <p>Correo electrónico: <a href="mailto:inquiry@homeyoutdoor.com">inquiry@homeyoutdoor.com</a> | WhatsApp: <a href="https://wa.me/8615919706381" target="_blank">+86 159 1970 6381</a></p>
+      <p>Dirección: Technologiezentrum am Europaplatz, Dennewartstraße 25, 52068 Aachen, Alemania (sucursal europea)<br>
+      Habitación 119, Edificio 1, Bandanyuan, N°2 Bulong Road, Comunidad Dongfang Bandao, Subdistrito Buji, Distrito Longgang, Ciudad de Shenzhen, Provincia de Guangdong, China (sucursal china)</p>
+    </div>
   </div>
 </body>
 </html>
