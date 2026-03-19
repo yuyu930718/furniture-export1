@@ -37,7 +37,10 @@ body{color:#333;background:#f8f9fa;line-height:1.8}
 .core-strength{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px;margin:40px 0}
 .card{background:#fff;padding:25px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
 .card h3{font-size:20px;color:#0066cc;margin-bottom:12px}
-.card p{font-size:14px;color:#666}
+.card h4{font-size:16px;margin:15px 0 10px}
+.card p{font-size:14px;color:#666;margin-bottom:15px}
+.card ul{padding-left:20px}
+.card li{font-size:14px;color:#666;margin:6px 0}
 
 .product-categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;margin-top:30px}
 .category-item{background:#fff;padding:30px;border-radius:12px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
@@ -82,13 +85,14 @@ body{color:#333;background:#f8f9fa;line-height:1.8}
 </div>
 
 <div class="container">
+  <!-- Inicio -->
   <div id="home" class="section">
     <h2 style="font-size:26px;margin-bottom:25px">Inicio</h2>
     <p style="font-size:15px;color:#666;margin-bottom:20px">
-      Homeyoutdoor es un fabricante de muebles profesional con 8 años de experiencia.
+      Homeyoutdoor es un fabricante de muebles profesional con 8 años de experiencia, que atiende a clientes de todo el mundo con muebles de interior y exterior de alta calidad.
     </p>
     <p style="font-size:15px;color:#666">
-      Nos dedicamos al diseño, producción y exportación de muebles de alta calidad.
+      Nos enfocamos en el diseño, producción y exportación, brindando servicios OEM y ODM fiables para compradores, distribuidores y marcas globales.
     </p>
     <div class="factory-stats">
       <div class="stat-item"><div class="num-info">8+</div><span>Años de experiencia</span></div>
@@ -99,46 +103,37 @@ body{color:#333;background:#f8f9fa;line-height:1.8}
     </div>
   </div>
 
+  <!-- Sobre nosotros -->
   <div id="about" class="section">
     <h2 style="font-size:26px;margin-bottom:25px">Sobre nosotros</h2>
     <div class="core-strength">
       <div class="card">
         <h3>01 Personalización</h3>
-        <p>Servicio OEM y ODM a medida.</p>
+        <h4>Servicio OEM & ODM</h4>
+        <p>Ofrecemos soluciones personalizadas profesionales para materiales, colores, tamaños y embalajes para satisfacer las necesidades de diferentes mercados.</p>
       </div>
       <div class="card">
         <h3>02 Producción</h3>
-        <p>Fábrica moderna, control de calidad estricto.</p>
+        <h4>Fábrica moderna</h4>
+        <p>Líneas de producción avanzadas, control de calidad estricto, entrega estable y estructura de costes competitiva.</p>
       </div>
       <div class="card">
         <h3>03 Servicio</h3>
-        <p>Solución completa para su negocio internacional.</p>
+        <h4>Solución integral</h4>
+        <p>Desde el diseño hasta el envío, ofrecemos soporte completo para su negocio de muebles en los mercados globales.</p>
       </div>
     </div>
   </div>
 
+  <!-- Productos -->
   <div id="products" class="section">
     <h2 style="font-size:26px;margin-bottom:25px">Productos</h2>
-    <div class="product-categories">
-      <div class="category-item">
-        <h3>Sillas de comedor</h3>
-        <p>Tela / Cuero / Terciopelo</p>
-      </div>
-      <div class="category-item">
-        <h3>Mesas de comedor</h3>
-        <p>MDF / Madera / Mármol</p>
-      </div>
-      <div class="category-item">
-        <h3>Sofás</h3>
-        <p>Moderno / Nórdico</p>
-      </div>
-      <div class="category-item">
-        <h3>Camas</h3>
-        <p>Con almacenamiento / Tapizadas</p>
-      </div>
+    <div class="product-categories" id="product-list">
+      <!-- Los productos se cargan automáticamente al hacer clic en Productos -->
     </div>
   </div>
 
+  <!-- Contacto -->
   <div id="contact" class="section">
     <h2 style="font-size:26px;margin-bottom:25px">Contacto</h2>
     <div class="contact-section">
@@ -159,6 +154,43 @@ body{color:#333;background:#f8f9fa;line-height:1.8}
 function show(id) {
   document.querySelectorAll('.section').forEach(el => el.style.display = 'none');
   document.getElementById(id).style.display = 'block';
+  if (id === 'products') loadProducts();
+}
+
+async function loadProducts() {
+  const list = document.getElementById('product-list');
+  list.innerHTML = '<p style="text-align:center;color:#666">Cargando productos...</p>';
+  try {
+    const res = await fetch('/_products/');
+    if (!res.ok) throw new Error('No hay productos');
+    const text = await res.text();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, 'text/html');
+    const files = Array.from(doc.querySelectorAll('a')).map(a => a.href).filter(h => h.endsWith('.md'));
+    if (files.length === 0) {
+      list.innerHTML = '<p style="text-align:center;color:#666">Aún no se han subido productos.</p>';
+      return;
+    }
+    let html = '';
+    for (const f of files) {
+      const md = await (await fetch(f)).text();
+      const title = md.match(/title:\s*(.+)/)?.[1] || 'Producto sin título';
+      const image = md.match(/image:\s*(.+)/)?.[1] || 'https://via.placeholder.com/260x160?text=Sin+imagen';
+      const desc = md.match(/description:\s*(.+)/)?.[1] || 'Sin descripción';
+      const cat = md.match(/category:\s*(.+)/)?.[1] || 'Sin categoría';
+      html += `
+        <div class="category-item">
+          <img src="${image}" alt="${title}" style="width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:12px">
+          <h3>${title}</h3>
+          <p>${cat}</p>
+          <p style="font-size:13px;color:#666;margin-top:8px">${desc}</p>
+        </div>
+      `;
+    }
+    list.innerHTML = html;
+  } catch (e) {
+    list.innerHTML = '<p style="text-align:center;color:#666">Aún no se han subido productos.</p>';
+  }
 }
 </script>
 </body>
