@@ -3,11 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <title>Content Manager</title>
+  <!-- 用稳定版 Decap CMS -->
+  <script src="https://unpkg.com/netlify-cms@^2.10.192/dist/netlify-cms.js"></script>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
-    CMS.init({});
+    CMS.init({
+      config: {
+        backend: {
+          name: "git-gateway",
+          branch: "main"
+        },
+        media_folder: "images",
+        public_folder: "/images",
+        collections: [
+          {
+            name: "products",
+            label: "Products",
+            folder: "_products",
+            create: true,
+            fields: [
+              { label: "Title", name: "title", widget: "string" },
+              { label: "Image", name: "image", widget: "image" },
+              { label: "Description", name: "description", widget: "text" },
+              { label: "Category", name: "category", widget: "select", options: ["Dining Chairs", "Dining Tables", "Sofas", "Beds"] }
+            ]
+          }
+        ]
+      }
+    });
   </script>
 </body>
 </html>
