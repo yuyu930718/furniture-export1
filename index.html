@@ -126,27 +126,51 @@ body{color:#333;background:#f8f9fa;line-height:1.8}
   </div>
 
   <!-- PRODUCTS (只显示分类，不上产品) -->
-  <div id="products" class="section">
-    <h2 style="font-size:26px;margin-bottom:25px">Products</h2>
-    <div class="product-categories">
-      <div class="category-item">
-        <h3>Dining Chairs</h3>
-        <p>Fabric / Leather / Velvet</p>
-      </div>
-      <div class="category-item">
-        <h3>Dining Tables</h3>
-        <p>MDF / Wooden / Marble</p>
-      </div>
-      <div class="category-item">
-        <h3>Sofas</h3>
-        <p>Modern / Nordic / Minimalist</p>
-      </div>
-      <div class="category-item">
-        <h3>Beds</h3>
-        <p>Storage / Upholstered</p>
-      </div>
-    </div>
+<div id="products" class="section">
+  <h2 style="font-size:26px;margin-bottom:25px">Products</h2>
+  <div class="product-categories" id="product-list">
+    <!-- 这里会自动显示后台上传的产品 -->
   </div>
+</div>
+
+<script>
+// 自动加载后台产品
+async function loadProducts() {
+  const productList = document.getElementById('product-list');
+  productList.innerHTML = '';
+
+  // 读取 _products 文件夹里的所有产品
+  const response = await fetch('/_products/');
+  const text = await response.text();
+  const parser = new DOMParser();
+  const htmlDoc = parser.parseFromString(text, 'text/html');
+  const files = Array.from(htmlDoc.querySelectorAll('a')).map(a => a.href).filter(href => href.endsWith('.md'));
+
+  for (const file of files) {
+    const res = await fetch(file);
+    const md = await res.text();
+    // 解析 Markdown 格式
+    const title = md.match(/title:\s*(.+)/)[1];
+    const image = md.match(/image:\s*(.+)/)[1];
+    const description = md.match(/description:\s*(.+)/)[1];
+    const category = md.match(/category:\s*(.+)/)[1];
+
+    productList.innerHTML += `
+      <div class="category-item">
+        <img src="${image}" alt="${title}" style="width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:12px">
+        <h3>${title}</h3>
+        <p>${category}</p>
+        <p style="font-size:13px;color:#666;margin-top:8px">${description}</p>
+      </div>
+    `;
+  }
+}
+
+// 页面加载完成后自动加载产品
+document.addEventListener('DOMContentLoaded', () => {
+  loadProducts();
+});
+</script>
 
   <!-- CONTACT -->
   <div id="contact" class="section">
